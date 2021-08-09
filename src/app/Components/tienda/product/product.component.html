@@ -1,0 +1,8 @@
+<h2>{{categoryProduct}}</h2>
+<div class="content__products">
+    <div class="product"  *ngFor="let pro of productos" (click)="selectProduct(pro)">
+        <img src="{{pro.imgURL}}" alt="">
+        <p>{{pro.name}}</p>
+        <p>${{pro.price}}</p>
+    </div>
+</div>

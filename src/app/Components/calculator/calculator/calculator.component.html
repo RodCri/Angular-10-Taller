@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="result">
+        <p>{{ resultado }}</p>
+    </div>
+    <div class="btn__numbers">
+        <button (click)="onClick($event)">1</button>
+        <button (click)="onClick($event)">2</button>
+        <button (click)="onClick($event)">3</button>
+        <button (click)="onClick($event)">4</button>
+        <button (click)="onClick($event)">5</button>
+        <button (click)="onClick($event)">6</button>
+        <button (click)="onClick($event)">7</button>
+        <button (click)="onClick($event)">8</button>
+        <button (click)="onClick($event)">9</button>
+        <button (click)="onClick($event)">0</button>
+    </div>
+    <div class="btn__operations">
+        <button (click)="onClick($event)">+</button>
+        <button (click)="onClick($event)">-</button>
+        <button (click)="onClick($event)">*</button>
+        <button (click)="onClick($event)">/</button>
+        <button (click)="onResult()">=</button>
+    </div>
+</div>
+<div>
+    {{message}}
+</div>

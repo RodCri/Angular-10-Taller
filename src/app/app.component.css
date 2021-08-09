@@ -1,0 +1,16 @@
+.box__register{
+    width: 90%;
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.products{
+    width: 60%;
+    padding: 0 10px;
+}
+.account{
+    width: 40%;
+}

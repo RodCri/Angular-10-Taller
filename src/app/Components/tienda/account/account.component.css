@@ -1,0 +1,55 @@
+h2{
+    background-color: blanchedalmond;
+    text-align: center;
+    text-transform: uppercase;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.delete-p{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: brown;
+    cursor: pointer;
+}
+.title-table{
+    display: flex;
+    flex-direction: row;
+}
+.title-table > p{
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.title-table p:nth-child(1){
+    width: 40%;
+}
+.title-table p:nth-child(2){
+    width: 20%;
+}
+.title-table p:nth-child(3){
+    width: 20%;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+}
+.product > p{
+    width: 30%;
+}
+.product p:nth-child(1){
+    width: 40%;
+}
+.product p:nth-child(2){
+    width: 20%;
+    text-align: center;
+}
+.product p:nth-child(3){
+    width: 20%;
+    text-align: center;
+}
+.product p:nth-child(4){
+    width: 20%;
+    text-align: center;
+}

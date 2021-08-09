@@ -1,0 +1,31 @@
+.rojo{
+    background-color: red;
+}
+.verde{
+    background-color: seagreen;
+}
+.card__task{
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+}
+.container__task{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card__task-info{
+    font-size: 18px;
+    color: #fff;
+
+}
+.card__task-options{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.card__task-options button{
+    width: 50%;
+    padding: 5px;
+}

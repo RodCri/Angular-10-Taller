@@ -1,0 +1,12 @@
+<div class="container__task">
+    <div class="card__task" *ngFor="let task of tasks" [ngClass]="{rojo:(task.state===false), verde:(task.state===true)}">
+        <div class="card__task-info">
+            <p>Task: {{ task.title }}</p>
+            <p>Description:{{ task.description }}</p>
+        </div>
+        <div class="card__task-options">
+            <button (click)="OnChangeState(task)" [ngStyle]="{'content':task.state == false ? 'Incomplete' : 'Complete' }">{{ task.state ? 'INCOMPLETA' : 'COMPLETA'}}</button>
+            <button (click)="OnDeleteTask(task)">Delete</button>
+        </div>
+    </div>
+</div>

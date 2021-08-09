@@ -1,0 +1,15 @@
+<h2>Cuenta Registrada</h2>
+<h2>Total: $ {{ calcTotal()}}</h2>
+<div class="products">
+    <div class="title-table">
+        <p>Producto</p>
+        <p>Precio</p>
+        <p>Cantidad</p>
+    </div>
+    <div class="product" *ngFor="let producto of arrProductos; let indice = index">
+        <p>{{producto.name}} </p>
+        <p>{{producto.price * producto.count}}</p> 
+        <p>{{producto.count}}</p>
+        <p><b class="delete-p" (click)="deleteProduct(indice)">X</b></p>
+    </div>
+</div>

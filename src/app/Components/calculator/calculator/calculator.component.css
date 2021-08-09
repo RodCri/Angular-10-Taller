@@ -1,0 +1,40 @@
+.container{
+    width: 300px;
+    border: 1px solid gray;
+    background-color: honeydew;
+    margin: 0 auto;
+}
+.result{
+    text-align: center;
+    margin: 1em;
+    border: 1px solid gray;
+    height: 50px;
+}
+.btn__numbers{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+.btn__numbers button{
+    width: 32%;
+    height: 30px;
+    margin: .1em;
+}
+.btn__numbers button:last-child{
+    width: 100%;   
+}
+.btn__operations{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+.btn__operations button{
+    width: 24%;
+    height: 30px;
+    margin: .1em;
+}
+.btn__operations button:last-child{
+    width: 100%;   
+}
