@@ -1,0 +1,21 @@
+<div class="formulario">
+    <div class="form__group">
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="nuevoProducto.nombre">
+    </div>
+    <div class="form__group">
+        <label>Cantidad: {{ nuevoProducto.cantidad }}</label>
+        <input type="range" [(ngModel)]="nuevoProducto.cantidad" min="0" max="15" step="1">
+    </div>
+    <div class="form__group">
+        <label>Departamento:</label>
+        <select [(ngModel)]="nuevoProducto.departamento">
+            <option value="carnes">Carnes</option>
+            <option value="frutas">Frutas</option>
+            <option value="hogar">Hogar</option>
+            <option value="pasteleria">Pastelería</option>
+        </select>
+    </div>
+    <button (click)="onRegistrar()">Registrar</button>
+    <!-- {{nuevoProducto | json}} -->
+</div>

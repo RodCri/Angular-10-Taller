@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Product } from './model/product.model';
+import { Product2 } from './model/product2.model';
 import { Task } from './model/task.model';
 
 @Component({
@@ -18,6 +19,9 @@ export class AppComponent {
   // array de productos seleccionados
   arrProductos: Product[];
 
+  // Productos seleccionados shopingList
+  productosSeleccionados: Product2[];
+  productosComprados: Product2[];
 
   constructor(){
     this.tasks = [];
@@ -39,6 +43,8 @@ export class AppComponent {
       new Product('castalia', 1.6, 'https://tomatelavida.com.co/wp-content/uploads/2018/07/freskola-transparente-800x1200.png')
     ];
     this.arrProductos = [];
+    this.productosSeleccionados = [];
+    this.productosComprados = [];
   }
 
   onTaskCreate($event){
@@ -55,5 +61,21 @@ export class AppComponent {
       this.arrProductos.push($event);
     }
   }
+
+  onProductoCreado($event){
+    this.productosSeleccionados.push($event);
+  }
+
+  onProductoSeleccionadoCompra($event){
+    const prod = this.productosSeleccionados.splice($event,1);
+    this.productosComprados.push(prod[0]);
+  }
+
+  onProductoEliminadoCompra($event){
+    const prod = this.productosComprados.splice($event,1);
+    this.productosSeleccionados.push(prod[0]);
+  }
+
+
 
 }

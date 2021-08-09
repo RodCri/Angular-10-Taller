@@ -14,3 +14,26 @@
 .account{
     width: 40%;
 }
+.contenedor{
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightsteelblue;
+}
+.register{
+    border: 1px solid black;
+    text-align: center;
+    padding: 1.5em;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    padding: 1.5em;
+}
+.list__select{
+    width: 50%;
+}
+.list__car{
+    width: 50%;
+}

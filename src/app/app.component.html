@@ -12,3 +12,16 @@
         <app-account [arrProductos]="arrProductos"></app-account>
     </div>
 </div> -->
+<div class="contenedor">
+    <div class="register">
+        <app-formulario (productoCreado)="onProductoCreado($event)"></app-formulario>
+    </div>
+    <div class="list">
+        <div class="list__select">
+            <app-lista-productos [productos]="productosSeleccionados" (productoSeleccionadoCompra)="onProductoSeleccionadoCompra($event)" txtButton="Comprar" txtTitle="Productos Seleccionados"></app-lista-productos>
+        </div>
+        <div class="list__car">
+            <app-lista-productos [productos]="productosComprados" txtButton="Quitar" txtTitle="Productos Comprados" (productoSeleccionadoCompra)="onProductoEliminadoCompra($event)"></app-lista-productos>
+        </div>
+    </div>
+</div>
