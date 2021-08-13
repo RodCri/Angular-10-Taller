@@ -1,0 +1,29 @@
+.content{
+    width: 80%;
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding: 1em;    
+}
+.content__title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.content__title p:first-child{
+    width: 20%;
+}
+.content__title p:last-child{
+    width: 80%;
+}
+.content__articles{
+    display: flex;
+    flex-direction: row;
+}
+.content__articles li:first-child{
+    width: 20%;
+}
+.content__articles li:last-child{
+    width: 80%;
+}
