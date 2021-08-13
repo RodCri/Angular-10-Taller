@@ -14,7 +14,6 @@ export class FormularioComponent implements OnInit {
   constructor() {
     // inicializamos el objeto de tipo producto
     this.nuevoProducto = new Product2();
-
     this.productoCreado = new EventEmitter()
   }
 
@@ -23,7 +22,7 @@ export class FormularioComponent implements OnInit {
 
   onRegistrar(){
     this.productoCreado.emit(this.nuevoProducto);
-    this.nuevoProducto = new Product2();
+    this.nuevoProducto = new Product2(); 
   }
 
 }

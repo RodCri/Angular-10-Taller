@@ -12,7 +12,8 @@
         <app-account [arrProductos]="arrProductos"></app-account>
     </div>
 </div> -->
-<div class="contenedor">
+
+<!-- <div class="contenedor">
     <div class="register">
         <app-formulario (productoCreado)="onProductoCreado($event)"></app-formulario>
     </div>
@@ -24,4 +25,9 @@
             <app-lista-productos [productos]="productosComprados" txtButton="Quitar" txtTitle="Productos Comprados" (productoSeleccionadoCompra)="onProductoEliminadoCompra($event)"></app-lista-productos>
         </div>
     </div>
+</div> -->
+
+<div class="rutas">
+    <a [routerLink]="['/calculator']" routerLinkActive="activa">Calculadora</a>    
 </div>
+<router-outlet></router-outlet>

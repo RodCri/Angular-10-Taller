@@ -11,6 +11,7 @@ import { ProductComponent } from './Components/tienda/product/product.component'
 import { AccountComponent } from './Components/tienda/account/account.component';
 import { FormularioComponent } from './Components/shopingList/formulario/formulario.component';
 import { ListaProductosComponent } from './Components/shopingList/lista-productos/lista-productos.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ListaProductosComponent } from './Components/shopingList/lista-producto
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule, 
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
