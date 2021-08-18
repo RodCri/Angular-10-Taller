@@ -32,4 +32,24 @@
 </div>
 <router-outlet></router-outlet> -->
 
-<app-articles></app-articles>
+<!-- // Rest API getArticles
+<app-articles></app-articles> -->
+
+<header>
+    <section>
+        <a href="#" id="logo" target="_blank">Mayur Suthar</a>
+        <label for="toggle-1" class="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
+        <input type="checkbox" id="toggle-1">
+    <nav>
+        <ul>
+            <li><a [routerLink]="['/info']" routerLinkActive="active-link">Information</a></li>
+            <li><a [routerLink]="['/about']" routerLinkActive="active-link">About</a></li>
+            <li><a [routerLink]="['/cli']" routerLinkActive="active-link">Clients</a></li>
+            <li><a [routerLink]="['/contact']" routerLinkActive="active-link">Contact</a></li>
+        </ul>
+    </nav>
+    </section>
+</header>
+<div class="contenedor">
+    <router-outlet></router-outlet>
+</div>

@@ -14,6 +14,13 @@ import { FormularioComponent } from './Components/shopingList/formulario/formula
 import { ListaProductosComponent } from './Components/shopingList/lista-productos/lista-productos.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ArticlesComponent } from './Components/articles/articles.component';
+import { AboutComponent } from './Components/blog/about/about.component';
+import { InfoComponent } from './Components/blog/info/info.component';
+import { ContactComponent } from './Components/blog/contact/contact.component';
+import { ClientsComponent } from './Components/blog/clients/clients.component';
+import { ProyectosComponent } from './Components/blog/clients/proyectos/proyectos.component';
+import { CurriculumComponent } from './Components/blog/clients/curriculum/curriculum.component';
+import { NotpageComponent } from './Components/blog/notpage/notpage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { ArticlesComponent } from './Components/articles/articles.component';
     AccountComponent,
     FormularioComponent,
     ListaProductosComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    AboutComponent,
+    InfoComponent,
+    ContactComponent,
+    ClientsComponent,
+    ProyectosComponent,
+    CurriculumComponent,
+    NotpageComponent
   ],
   imports: [
     BrowserModule,

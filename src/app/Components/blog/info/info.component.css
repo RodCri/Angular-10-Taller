@@ -1,0 +1,26 @@
+.content__info{
+    background-color: #1976d2;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: lightyellow;
+    width: 100%;
+    border-radius: 1em;
+}
+.content__info-logo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content__info-logo img{
+    width: 100%;
+}
+.content__info-text{
+    width: 70%;
+    line-height: 1.4em;
+    font-size: 1.2em;
+    padding: 0 1em;
+}
