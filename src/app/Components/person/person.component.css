@@ -1,0 +1,50 @@
+.contenedor{
+    width: 80%;
+    background-color: lightgrey;
+    margin: auto;
+    padding: 2em;
+}
+p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin: 2em 0;
+}
+table{
+    background-color: lightsalmon;
+    padding: 1em;
+    width: 60%;
+    text-align: center;
+    line-height: 2em;
+}
+tr{
+    background-color: lightseagreen;
+}
+th{
+    background-color: lightseagreen;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+button{
+    width: 50%;
+    padding: .6em;
+}
+.btn{
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn:hover{
+    text-decoration: underline;
+}
+.buttons button:first-child{
+    background-color: limegreen;
+}
+.buttons button:last-child{
+    background-color: lightpink;
+}

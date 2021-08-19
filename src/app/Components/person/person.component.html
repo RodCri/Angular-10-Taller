@@ -1,0 +1,26 @@
+<div class="contenedor">
+    <p>Service Persons</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Status</th>
+            <th>Age</th>
+        </tr>
+        <tbody *ngFor="let per of persons">
+            <td>{{per.name}}</td>
+            <td>{{per.lastname}}</td>
+            <td>{{per.state}}</td>
+            <td>{{per.age}}</td>
+        </tbody>
+    </table>
+    <div class="buttons">
+        <button class="btn" (click)="activos()">Activos</button>
+        <button class="btn" (click)="newPerson()">New</button>
+        <button class="btn" (click)="inactivos()">Inactivos</button>
+    </div>
+    <div class="buttons">
+        <button class="btn" (click)="activosPromise()">Activos Promise</button>
+        <button class="btn" (click)="newPersonPromse()">New Promise</button>
+    </div>
+</div>    

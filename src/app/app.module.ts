@@ -21,6 +21,7 @@ import { ClientsComponent } from './Components/blog/clients/clients.component';
 import { ProyectosComponent } from './Components/blog/clients/proyectos/proyectos.component';
 import { CurriculumComponent } from './Components/blog/clients/curriculum/curriculum.component';
 import { NotpageComponent } from './Components/blog/notpage/notpage.component';
+import { PersonComponent } from './Components/person/person.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NotpageComponent } from './Components/blog/notpage/notpage.component';
     ClientsComponent,
     ProyectosComponent,
     CurriculumComponent,
-    NotpageComponent
+    NotpageComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

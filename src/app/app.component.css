@@ -143,10 +143,10 @@ input[type=checkbox], label{display:none;}
         background:none;
     }
     label {
-        float:right; 
         padding:8px 0px; 
-        display:inline-block; 
+        display:block; 
         cursor:pointer; 
+        float: right;
     }
     nav ul{
         margin: 0;
