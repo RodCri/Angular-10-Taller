@@ -1,0 +1,14 @@
+<select (change)="selectPais($event)">
+    <option value="todos">Todos</option>
+    <option value="españa">España</option>
+    <option value="reino unido">Reino Unido</option>
+    <option value="chile">Chile</option>
+    <option value="canadá">Canada</option>
+</select>
+<div class="escritores">
+    <div class="escritor" *ngFor="let esc of arrEscritores">
+        <h3>{{esc.nombre}} {{esc.apellidos}}</h3>
+        <img [src]="esc.imagen" alt="">
+        <p>Pais: {{esc.pais}}</p>
+    </div>
+</div>

@@ -59,16 +59,10 @@ export class PersonService {
 
   getActive3(): Promise<Person[]>{
     // creamos la promesa
-    const prom = new Promise<Person[]>((resolve, reject) => {
-      const arrTemp: Person[] = [];
-      for(let persona of this.persons){
-        if(persona.state){
-          arrTemp.push(persona);
-        }
-      }
+    return new Promise<Person[]>((resolve, reject) => {
+      const arrTemp = this.persons.filter(persona => persona.state);
       resolve(arrTemp);
     });
-    return prom;
   }
 
 }
