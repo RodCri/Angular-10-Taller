@@ -1,0 +1,53 @@
+<h2>Formulario de tipo Model</h2>
+<form [formGroup]="formulario" (ngSubmit)="register()">
+    <div class="form-group my-3">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <div class="error" *ngIf="formulario.controls.name.errors?.required && formulario.controls.name.touched">
+            The name is required
+        </div>
+        <div class="error" *ngIf="formulario.controls.name.errors?.minlength && formulario.controls.name.touched">
+            The length of name not is valid {{ formulario.controls.name.errors.minlength.requiredLength }} characters
+        </div>
+        <!-- Para acceder a los controles del input -->
+        <!-- <div>
+            <p>Valid: {{ formulario.controls.name.valid }}</p>
+            <p>{{ formulario.controls.name.errors | json }}</p>
+        </div> -->
+    </div>
+    <div class="form-group my-3">
+        <label>LastName</label>
+        <input type="text" class="form-control" formControlName="lastName">
+    </div>
+    <div class="form-group my-3">
+        <label>Age</label>
+        <input type="text" class="form-control" formControlName="age">
+        <div class="error" *ngIf="formulario.controls.age.errors?.edadValidator && formulario.controls.age.touched">
+            age should be in the range of {{ formulario.controls.age.errors.edadValidator.min }} y {{ formulario.controls.age.errors.edadValidator.max }}
+        </div>
+    </div>
+    <div class="form-group my-3">
+        <label>DNI</label>
+        <input type="text" class="form-control" formControlName="dni">
+        <div class="error" *ngIf="formulario.controls.dni.errors && formulario.controls.dni.touched">
+            {{ formulario.controls.dni.errors.dniValidator }}
+        </div>
+    </div>
+    <div class="form-group my-3">
+        <label>Password</label>
+        <input type="text" class="form-control" formControlName="password">
+    </div>
+    <div class="form-group my-3">
+        <label>Repeat Password</label>
+        <input type="text" class="form-control" formControlName="repeat_password">
+    </div>
+    <div class="form-group my-3">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-block w-100 btn-success my-3" [disabled]="!formulario.valid">
+</form>
+{{formulario.value | json}}
+<div>
+    <p>Valido: {{formulario.valid}}</p>
+</div>

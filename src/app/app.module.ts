@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+// Para trabajar con formularios template FormsModule
+// Para trabajar con formulario model ReactiveFormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './Components/calculator/calculator/calculator.component';
@@ -23,6 +25,8 @@ import { CurriculumComponent } from './Components/blog/clients/curriculum/curric
 import { NotpageComponent } from './Components/blog/notpage/notpage.component';
 import { PersonComponent } from './Components/person/person.component';
 import { ListaEscritoresComponent } from './Components/lista-escritores/lista-escritores.component';
+import { TemplateComponent } from './Components/formularios/template/template.component';
+import { ModelComponent } from './Components/formularios/model/model.component';
 
 @NgModule({
   declarations: [
@@ -43,13 +47,16 @@ import { ListaEscritoresComponent } from './Components/lista-escritores/lista-es
     CurriculumComponent,
     NotpageComponent,
     PersonComponent,
-    ListaEscritoresComponent
+    ListaEscritoresComponent,
+    TemplateComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
