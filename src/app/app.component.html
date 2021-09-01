@@ -61,6 +61,7 @@
 <!-- // Servicios promesas filtros
 <app-lista-escritores></app-lista-escritores> -->
 
+<!-- Formularios tipo model y template, validaciones simples y personalizadas
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -71,5 +72,27 @@
         <div class="col-12">
             <app-template></app-template>
         </div>
+    </div>
+</div> -->
+<!-- Ejercicio con formularios y validaciones
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <app-register></app-register>
+        </div>
+        <div class="col-6">
+            <app-list-employees></app-list-employees>
+        </div>
+    </div>
+</div> -->
+
+<button (click)="onClickPost()">Peticion Post</button>
+<button (click)="onClickUpdate()">Peticion Put</button>
+<button (click)="onClickDelete()">Peticion Delete</button>
+<div class="posts">
+    <div class="post" *ngFor="let post of arrPost" (click)="details(post.id)">
+        <h4>{{post.title}}</h4>
+        <p>{{post.body}}</p>
+        <p>{{post.userId}}</p>
     </div>
 </div>

@@ -196,3 +196,16 @@ nav ul li a i{
         top:47px;
     }
 }
+
+.posts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post{
+    border: 1px solid black;
+    width: 400px;
+    padding: 1em;
+    margin: 1em;
+}

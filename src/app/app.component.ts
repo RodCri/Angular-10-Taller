@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Product } from './model/product.model';
 import { Product2 } from './model/product2.model';
 import { Task } from './model/task.model';
+import { PostsService } from './services/posts.service';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,10 @@ export class AppComponent {
   productosSeleccionados: Product2[];
   productosComprados: Product2[];
 
-  constructor(){
+  // Array de post para el api
+  arrPost: any[];
+
+  constructor(private postService: PostsService){
     this.tasks = [];
 
     this.arrComida = [
@@ -76,6 +80,48 @@ export class AppComponent {
     this.productosSeleccionados.push(prod[0]);
   }
 
+  ngOnInit(): void {
+    this.postService.getAll()
+      .then(post=> this.arrPost = post)
+      .catch(error => console.log(error));
+    
+  }  
 
+  async details(postId){
+    try{
+      const post = await this.postService.getById(postId);
+      console.log(post)
+    }catch(error){
+      console.log(error)
+    }
+  }
+
+  onClickPost(){
+    this.postService.newPost({
+      title: 'Nuevo Titulo',
+      body: 'Cuerpo del post',
+      userId: 1
+    }).then(response => console.log(response))
+      .catch(error => console.log(error))
+  }
+
+  onClickUpdate(){
+    this.postService.updatePost({
+      id: 5,
+      title: 'nuevo titulo',
+      body: 'nuevo body',
+      userId: 3
+    }).then(response => console.log(response))
+    .catch(error => console.log(error));
+  }
+
+  async onClickDelete(){
+    try{
+      const response = await this.postService.deletePost(5);
+      console.log(response);
+    }catch(error){
+      console.log(error)
+    }
+  }
 
 }

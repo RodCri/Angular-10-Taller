@@ -1,0 +1,10 @@
+<div class="employees">
+    <div class="employee" *ngFor="let emp of employees">
+        <h4>{{emp.name}} {{emp.lastName}}</h4>
+        <img [src]="emp.photo" alt="">
+        <ul>
+            <li>{{emp.age}}</li>
+            <li>{{emp.department}}</li>
+        </ul>
+    </div>
+</div>

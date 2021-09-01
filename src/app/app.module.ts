@@ -27,6 +27,8 @@ import { PersonComponent } from './Components/person/person.component';
 import { ListaEscritoresComponent } from './Components/lista-escritores/lista-escritores.component';
 import { TemplateComponent } from './Components/formularios/template/template.component';
 import { ModelComponent } from './Components/formularios/model/model.component';
+import { RegisterComponent } from './Components/Employees/register/register.component';
+import { ListEmployeesComponent } from './Components/Employees/list-employees/list-employees.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ModelComponent } from './Components/formularios/model/model.component';
     PersonComponent,
     ListaEscritoresComponent,
     TemplateComponent,
-    ModelComponent
+    ModelComponent,
+    RegisterComponent,
+    ListEmployeesComponent
   ],
   imports: [
     BrowserModule,

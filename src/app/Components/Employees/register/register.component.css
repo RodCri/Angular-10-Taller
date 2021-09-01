@@ -1,0 +1,7 @@
+.error{
+    color: tomato;
+    font-size: 10px;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid tomato;
+}
